@@ -1,0 +1,153 @@
+/* ============================================================
+linesandwaves Resume CSS
+
+Thanks:
+================
+
+- Brian Talbot (http://www.brian-talbot.com) for the organizational scheme and utility helpers... you're the Obi-Wan of FED, dude.
+- Ethan Marcotte (http://www.unstoppablerobotninja.com) for teaching me (and everyone else) all about fluid grids.
+- Robert Bringhurst and the dudes from www.blah.com for allowing me to bite their style.
+
+Notes:
+================
+
+- Based on 940px width, 16 Columns, 20px Gutters
+- All em values calculated via this formula: target ÷ context = result
+- The "16" is based on the standard default font size for browsers at 100% font size, 16px.
+- 58.75em is the 940px width on #wrap
+- Where possible images are also "fluid", and generally 1.5 times their default size.
+
+1 - 40
+2 - 100
+3 - 160
+4 - 220
+5 - 280
+6 - 340
+7 - 400
+8 - 460
+9 - 520
+10 - 580
+11 - 640
+12 - 700
+13 - 760
+14 - 820
+15 - 880
+16 - 940
+
+.one {width: 4.2553%;}
+.two {width: 10.638%;}
+.three {width: 17.021%;}
+.four {width: 23.404%;}
+.five {width: 29.787%;}
+.six {width: 36.170%;}
+.seven {width: 42.553%;}
+.eight {width: 48.936%;}
+.nine {width: 55.319%;}
+.ten {width: 61.702%;}
+.eleven {width: 68.085%;}
+.twelve {width: 74.468%;}
+.thirteen {width: 80.851%;}
+.fourteen {width: 87.234%;}
+.fifteen {width: 93.617%;}
+.sixteen {width: 100%;}
+
+.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve, .thirteen, .fourteen, .fifteen {margin-left: 1.25em;}
+
+============================================================ */
+
+/* ------------------------------------------------------------
++Reset
+------------------------------------------------------------ */
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,input,textarea,p,blockquote,th,td {margin: 0; padding: 0;}
+table {border-collapse: collapse; border-spacing: 0;}
+img {border: 0;}
+address,caption,cite,code,dfn,em,strong,th,var {font-style:normal; font-weight:normal;}
+ol,ul {list-style: none;}
+caption,th {text-align: left;}
+h1,h2,h3,h4,h5,h6 {font-size: 100%; font-weight: normal;}
+q:before,q:after {content: '';}
+abbr,acronym {border: 0;}
+fieldset {border: 0; margin: 0; padding: 0;}
+
+/* ------------------------------------------------------------
++General Settings
+------------------------------------------------------------ */
+
+body {background: #ece7df;}
+a {color: #1c4cc4; text-decoration: none;}
+a:hover {color: #002888; text-decoration: underline;}
+img {max-width: 100%;}
+.pdf {visibility: hidden;}
+
+/* ------------------------------------------------------------
++Layout
+------------------------------------------------------------ */
+
+ul li {list-style: disc outside none;}
+.hresume {margin: 0 auto; max-width: 58.75em; padding: 0 1.25em;}
+.section {border-top: 1px solid #e2e1da; clear: both; margin-top: 1.25em; padding-top: 1.25em;}
+.section > * {float: right; width: 80.851%;}
+.section > h2 {float: left; margin-right: 2.1277%; width: 17.021%;}
+.contact > p {clear: right; float: right; text-align: right;}
+.contact .title, .contact .web {float: none; text-align: left;}
+.contact > div {float: right; margin-top: 1em;}
+.contact > div:first-child {float: left; margin: 0;}
+.education .duration, .education .location {clear: right; float: right;}
+.education .summary {float: left; width: 60%;}
+h1 + .section {border: 0; padding: 0;}
+.section .vcalendar {border-top: 1px solid #e2e1da; margin-top: 1.25em; padding-top: 1.25em;}
+.section h2 + .vcalendar {border: 0; margin: 0; padding: 0;}
+.vcalendar .timespan {clear: right; float: right; margin-top: .5em;}
+.vcalendar .position {clear: left; float: left; width: 60%;}
+.vcalendar .timespan, .position {margin-bottom: 1.25em;}
+.vcalendar .description {clear: both;}
+
+/* ------------------------------------------------------------
++Typography
+------------------------------------------------------------ */
+
+body {background: #fcfbf3; color: #333; font: .938em/1.5em "Minion Pro", Times, "Times New Roman", serif;}
+.section > h2, .duration {letter-spacing: .1em; text-transform: uppercase;}
+.contact {line-height: normal;}
+.contact h3 {font-size: 2em;}
+ h3 {font-size: 1.5em; line-height: 1; margin-bottom: .125em;}
+.vcalendar h4 {line-height: 1.2;}
+.location, .vcalendar h4, .contact .title {font-style: italic; letter-spacing: .05em;}
+.location {text-align: right;}
+.duration {font-size: .814em; line-height: 1.2;}
+
+/* ------------------------------------------------------------
++Media Queries
+------------------------------------------------------------ */
+
+@media (max-width: 680px) {
+    body {line-height: 1.4;}
+    .vcalendar .position {width: 55%;}
+    .vcalendar h3, .contact h3 {font-size: 1.375;}
+    .section > h2, .duration {font-size: .913em; text-transform: uppercase;}
+    .duration {font-size: .814em;}
+}
+
+@media (max-width: 570px) {
+    .contact > div, .contact > div:first-child {float: none; margin: 0;}
+    .contact {position: relative;}
+    .pdf {bottom: 0; right: 0; position: absolute;}
+    .section > h2 {border-bottom: 1px solid #e2e1da; margin-bottom: 1em; padding-bottom: .5em;}
+    .section > *, .section > h2 {float: none; width: 100%;}
+    .hresume {padding: 0 1.5em;}
+    .vcalendar .position {float: none; margin-bottom: .25em; width: auto;}
+    .vcalendar .timespan {float: none; margin: 0 0 .75em;}
+    .vcalendar .location {float: right; line-height: normal; font-size: .913em;}
+    .vcalendar .duration {float: left; line-height: normal;}
+    .section {border-top: 4px solid #e2e1da; padding-top: .5em;}
+    .education .summary {margin-bottom: .5em; width: auto;}
+}
+
+/* ------------------------------------------------------------
++Utilities
+------------------------------------------------------------ */
+
+.clearfix:after, .section:after, .timespan:after {clear: both; content: "."; display: block; height: 0; visibility: hidden;}
+.hidden {font-size: 1px; left: -9999px; line-height: 0px; margin: 0; padding: 0; position: absolute; width: 9999px;}
+.hiddenText {text-indent: -9999px;}
