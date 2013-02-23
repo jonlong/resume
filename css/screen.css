@@ -15,7 +15,6 @@ Notes:
 - All em values calculated via this formula: target ÷ context = result
 - The "16" is based on the standard default font size for browsers at 100% font size, 16px.
 - 58.75em is the 940px width on #wrap
-- Where possible images are also "fluid", and generally 1.5 times their default size.
 
 1 - 40
 2 - 100
@@ -85,19 +84,19 @@ img {max-width: 100%;}
 ------------------------------------------------------------ */
 
 ul li {list-style: disc outside none;}
-.hresume {margin: 0 auto; max-width: 58.75em; padding: 0 1.25em;}
-.section {border-top: 1px solid #e2e1da; clear: both; margin-top: 1.25em; padding-top: 1.25em;}
-.section > * {float: right; width: 80.851%;}
-.section > h2 {float: left; margin-right: 2.1277%; width: 17.021%;}
+main {margin: 0 auto; max-width: 58.75em; padding: 0 1.25em;}
+section, .main-header {border-top: 1px solid #e2e1da; clear: both; margin-top: 1.25em; padding-top: 1.25em;}
+.main-header {border: 0; padding: 0;}
+section > *, .main-header > * {float: right; width: 80.851%;}
+section > h2 {float: left; margin-right: 2.1277%; width: 17.021%;}
 .contact > p {clear: right; float: right; text-align: right;}
-.contact .title, .contact .web {float: none; text-align: left;}
+.contact .title, .contact .url {float: none; text-align: left;}
 .contact > div {float: right; margin-top: 1em;}
 .contact > div:first-child {float: left; margin: 0;}
 .education .duration, .education .location {clear: right; float: right;}
 .education .summary {float: left; width: 60%;}
-h1 + .section {border: 0; padding: 0;}
-.section .vcalendar {border-top: 1px solid #e2e1da; margin-top: 1.25em; padding-top: 1.25em;}
-.section h2 + .vcalendar {border: 0; margin: 0; padding: 0;}
+section .vcalendar {border-top: 1px solid #e2e1da; margin-top: 1.25em; padding-top: 1.25em;}
+section h2 + .vcalendar {border: 0; margin: 0; padding: 0;}
 .vcalendar .timespan {clear: right; float: right; margin-top: .5em;}
 .vcalendar .position {clear: left; float: left; width: 60%;}
 .vcalendar .timespan, .position {margin-bottom: 1.25em;}
@@ -108,12 +107,12 @@ h1 + .section {border: 0; padding: 0;}
 ------------------------------------------------------------ */
 
 body {background: #fcfbf3; color: #333; font: .938em/1.5em "Minion Pro", Times, "Times New Roman", serif;}
-.section > h2, .duration {letter-spacing: .1em; text-transform: uppercase;}
+section > h2, .duration {letter-spacing: .1em; text-transform: uppercase;}
 .contact {line-height: normal;}
 .contact h3 {font-size: 2em;}
  h3 {font-size: 1.5em; line-height: 1; margin-bottom: .125em;}
 .vcalendar h4 {line-height: 1.2;}
-.location, .vcalendar h4, .contact .title {font-style: italic; letter-spacing: .05em;}
+.location, .vcalendar h4, .contact p[itemprop="title"] {font-style: italic; letter-spacing: .05em;}
 .location {text-align: right;}
 .duration {font-size: .814em; line-height: 1.2;}
 
@@ -125,22 +124,22 @@ body {background: #fcfbf3; color: #333; font: .938em/1.5em "Minion Pro", Times, 
     body {line-height: 1.4;}
     .vcalendar .position {width: 55%;}
     .vcalendar h3, .contact h3 {font-size: 1.375;}
-    .section > h2, .duration {font-size: .913em; text-transform: uppercase;}
+    section > h2, .duration {font-size: .913em; text-transform: uppercase;}
     .duration {font-size: .814em;}
 }
 
 @media (max-width: 570px) {
+    main {padding: 0 1.5em;}
     .contact > div, .contact > div:first-child {float: none; margin: 0;}
     .contact {position: relative;}
     .pdf {bottom: 0; right: 0; position: absolute;}
-    .section > h2 {border-bottom: 1px solid #e2e1da; margin-bottom: 1em; padding-bottom: .5em;}
-    .section > *, .section > h2 {float: none; width: 100%;}
-    .hresume {padding: 0 1.5em;}
+    section > h2 {border-bottom: 1px solid #e2e1da; margin-bottom: 1em; padding-bottom: .5em;}
+    section > *, section > h2 {float: none; width: 100%;}
     .vcalendar .position {float: none; margin-bottom: .25em; width: auto;}
     .vcalendar .timespan {float: none; margin: 0 0 .75em;}
     .vcalendar .location {float: right; line-height: normal; font-size: .913em;}
     .vcalendar .duration {float: left; line-height: normal;}
-    .section {border-top: 4px solid #e2e1da; padding-top: .5em;}
+    section {border-top: 4px solid #e2e1da; padding-top: .5em;}
     .education .summary {margin-bottom: .5em; width: auto;}
 }
 
@@ -148,6 +147,9 @@ body {background: #fcfbf3; color: #333; font: .938em/1.5em "Minion Pro", Times, 
 +Utilities
 ------------------------------------------------------------ */
 
-.clearfix:after, .section:after, .timespan:after {clear: both; content: "."; display: block; height: 0; visibility: hidden;}
+.clearfix:after,
+section:after,
+.timespan:after,
+header:after {clear: both; content: "."; display: block; height: 0; visibility: hidden;}
 .hidden {font-size: 1px; left: -9999px; line-height: 0px; margin: 0; padding: 0; position: absolute; width: 9999px;}
 .hiddenText {text-indent: -9999px;}
