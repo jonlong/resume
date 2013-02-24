@@ -134,7 +134,7 @@ section > header, .duration {letter-spacing: .1em; text-transform: uppercase;}
     .contact {position: relative;}
     .pdf {bottom: 0; right: 0; position: absolute;}
     section > header {border-bottom: 1px solid #e2e1da; margin-bottom: 1em; padding-bottom: .5em;}
-    section > *, section > header {float: none; width: 100%;}
+    section > *, .main-header > *, section > header {float: none; width: 100%;}
     .vcalendar .position {float: none; margin-bottom: .25em; width: auto;}
     .vcalendar .timespan {float: none; margin: 0 0 .75em;}
     .vcalendar .location {float: right; line-height: normal; font-size: .913em;}
@@ -148,8 +148,8 @@ section > header, .duration {letter-spacing: .1em; text-transform: uppercase;}
 ------------------------------------------------------------ */
 
 .clearfix:after,
-section:after,
 .timespan:after,
+section:after,
 header:after {clear: both; content: "."; display: block; height: 0; visibility: hidden;}
 .hidden {font-size: 1px; left: -9999px; line-height: 0px; margin: 0; padding: 0; position: absolute; width: 9999px;}
 .hiddenText {text-indent: -9999px;}
