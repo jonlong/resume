@@ -84,6 +84,8 @@ img {max-width: 100%;}
 ------------------------------------------------------------ */
 
 ul li {list-style: disc outside none;}
+ul ul {margin-left: 1em;}
+ul ul li {list-style: circle outside none;}
 main {margin: 0 auto; max-width: 58.75em; padding: 0 1.25em;}
 section, .main-header {border-top: 1px solid #e2e1da; clear: both; margin-top: 1.25em; padding-top: 1.25em;}
 .main-header {border: 0; padding: 0;}
@@ -95,8 +97,8 @@ section > header {float: left; margin-right: 2.1277%; width: 17.021%;}
 .contact > div:first-child {float: left; margin: 0;}
 .education .duration, .education .location {clear: right; float: right;}
 .education .summary {float: left; width: 60%;}
-section .vcalendar {border-top: 1px solid #e2e1da; margin-top: 1.25em; padding-top: 1.25em;}
-section header + .vcalendar {border: 0; margin: 0; padding: 0;}
+section > div {border-top: 1px solid #e2e1da; margin-top: 1.25em; padding-top: 1.25em;}
+section > header + div, section > div:first-child {border: 0; margin: 0; padding: 0;}
 .vcalendar .timespan {clear: right; float: right; margin-top: .5em;}
 .vcalendar .position {clear: left; float: left; width: 60%;}
 .vcalendar .timespan, .position {margin-bottom: 1.25em;}
@@ -110,7 +112,7 @@ body {background: #fcfbf3; color: #333; font: .938em/1.5em "Minion Pro", Times, 
 section > header, .duration {letter-spacing: .1em; text-transform: uppercase;}
 .contact {line-height: normal;}
 .contact h3 {font-size: 2em;}
- h3 {font-size: 1.5em; line-height: 1; margin-bottom: .125em;}
+h3, .fn {font-size: 1.5em; line-height: 1; margin-bottom: .125em;}
 .vcalendar h4 {line-height: 1.2;}
 .location, .vcalendar h4, .contact p[itemprop="title"] {font-style: italic; letter-spacing: .05em;}
 .location {text-align: right;}
@@ -124,17 +126,16 @@ section > header, .duration {letter-spacing: .1em; text-transform: uppercase;}
     body {line-height: 1.4;}
     .vcalendar .position {width: 55%;}
     .vcalendar h3, .contact h3 {font-size: 1.375;}
-    section > header, .duration {font-size: .913em; text-transform: uppercase;}
-    .duration {font-size: .814em;}
+    section > header, .duration {font-size: .814em; text-transform: uppercase;}
 }
 
 @media (max-width: 570px) {
     main {padding: 0 1.5em;}
-    .contact > div, .contact > div:first-child {float: none; margin: 0;}
+    .contact > div, .contact > div:first-child, .contact {float: none; margin: 0;}
     .contact {position: relative;}
     .pdf {bottom: 0; right: 0; position: absolute;}
     section > header {border-bottom: 1px solid #e2e1da; margin-bottom: 1em; padding-bottom: .5em;}
-    section > *, .main-header > *, section > header {float: none; width: 100%;}
+    section > *, section > header {float: none; width: 100%;}
     .vcalendar .position {float: none; margin-bottom: .25em; width: auto;}
     .vcalendar .timespan {float: none; margin: 0 0 .75em;}
     .vcalendar .location {float: right; line-height: normal; font-size: .913em;}
@@ -148,8 +149,8 @@ section > header, .duration {letter-spacing: .1em; text-transform: uppercase;}
 ------------------------------------------------------------ */
 
 .clearfix:after,
-.timespan:after,
 section:after,
+.timespan:after,
 header:after {clear: both; content: "."; display: block; height: 0; visibility: hidden;}
 .hidden {font-size: 1px; left: -9999px; line-height: 0px; margin: 0; padding: 0; position: absolute; width: 9999px;}
 .hiddenText {text-indent: -9999px;}
