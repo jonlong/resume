@@ -109,6 +109,7 @@ section > header + div, section > div:first-child {border: 0; margin: 0; padding
 ------------------------------------------------------------ */
 
 body {background: #fcfbf3; color: #333; font: .938em/1.5em "Minion Pro", Times, "Times New Roman", serif;}
+strong {font-weight: 700;}
 section > header, .duration {letter-spacing: .1em; text-transform: uppercase;}
 .contact {line-height: normal;}
 .contact h3 {font-size: 2em;}
