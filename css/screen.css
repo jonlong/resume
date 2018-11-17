@@ -140,7 +140,7 @@ h3, .fn {font-size: 1.5em; line-height: 1; margin-bottom: .125em;}
     .vcalendar .position {float: none; margin-bottom: .25em; width: auto;}
     .vcalendar .timespan {float: none; margin: 0 0 .75em;}
     .vcalendar .location {float: right; line-height: normal; font-size: .913em;}
-    .vcalendar .duration {float: left; line-height: normal;}
+    .vcalendar .duration {float: left; line-height: normal; clear: both;}
     section {border-top: 4px solid #e2e1da; padding-top: .5em;}
     .education .summary {margin-bottom: .5em; width: auto;}
 }
