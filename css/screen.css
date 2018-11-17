@@ -86,7 +86,7 @@ img {max-width: 100%;}
 ul li {list-style: disc outside none;}
 ul ul {margin-left: 1em;}
 ul ul li {list-style: circle outside none;}
-main {margin: 0 auto; max-width: 58.75em; padding: 0 1.25em;}
+main {margin: 3.75em auto; max-width: 58.75em; padding: 0 1.25em;}
 section, .main-header {border-top: 1px solid #e2e1da; clear: both; margin-top: 1.25em; padding-top: 1.25em;}
 .main-header {border: 0; padding: 0;}
 section > *, .main-header > * {float: right; width: 80.851%;}
