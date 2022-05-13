@@ -69,6 +69,7 @@ q:before,q:after {content: '';}
 abbr,acronym {border: 0;}
 fieldset {border: 0; margin: 0; padding: 0;}
 article, aside, dialog, figure, footer, header, hgroup, nav, section, main { display: block; zoom: 1; }
+
 /* ------------------------------------------------------------
 +General Settings
 ------------------------------------------------------------ */
@@ -108,7 +109,7 @@ section > header + div, section > div:first-child {border: 0; margin: 0; padding
 +Typography
 ------------------------------------------------------------ */
 
-body {background: #fcfbf3; color: #333; font: .938em/1.5em "Minion Pro", Times, "Times New Roman", serif;}
+body {background: #fcfbf3; color: #333; font: .938em/1.5em Times, "Times New Roman", serif;}
 strong {font-weight: 700;}
 section > header, .duration {letter-spacing: .1em; text-transform: uppercase;}
 .contact {line-height: normal;}
